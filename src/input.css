@@ -1,0 +1,312 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 1;
+}
+
+/* GLOBALS */
+html, body {
+    /* choose text font */
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
+}
+img {
+    @apply max-w-[96vw];
+}
+
+h1 {
+    @apply md:text-[42px] text-[36px];
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 15px;
+}
+h2 {
+    font-size: 24px;
+}
+
+p, b {
+    @apply md:text-[18px] text-[20px];
+    line-height: 1.7em;
+}
+
+
+.highlight {
+    /* choose a highlight color */
+    background-color: #ffaa88;
+    text-align: center;
+    padding: 2px 2px;
+}
+
+.bullet {
+    @apply w-[45vw] rounded flex flex-row items-center gap-6 p-6 pl-18 pr-18;
+}
+
+/* cta */
+.cta {
+    @apply flex flex-col items-center gap-4 text-black;
+}
+.cta-button {
+    @apply p-7 md:pl-16 md:pr-16 font-bold rounded-sm text-lg shadow-lg
+        pl-8 pr-8 text-center;
+    /* choose cta button color */
+    background-color: #FF8C72;
+}
+.cta-button:hover {
+    cursor: pointer;
+    /* choose cta button color */
+    background-color: rgb(240, 123, 96);
+}
+
+/* icon-proof boxes */
+.icon-container {
+    @apply flex flex-row justify-center md:gap-2 md:mt-0 flex-wrap md:w-[60%]
+        w-[98%] gap-3 gap-y-5 mt-10;
+}
+.icon-box {
+    @apply flex flex-col items-center md:w-[250px] leading-[1.7] md:gap-3 md:p-5 text-center md:text-lg
+        w-[100px] text-base p-0 gap-1 ;
+}
+
+/* line */
+.line {
+    @apply w-[60px] h-1 bg-brand rounded;
+}
+
+/* check list */
+.check-box { 
+    @apply text-[18px] md:w-[40%] gap-7 border-3 border-brand flex flex-col rounded bg-white shadow-sm p-12 md:pl-6 md:pr-10
+        w-[92%] pl-4 pr-6;
+}
+.check-box div {
+    @apply flex flex-row items-center gap-4;
+}
+
+/* step box */
+.step-box {
+    @apply flex flex-col items-center gap-4 w-[300px] p-10 pl-6 pr-6 bg-white;
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 208, 198));
+}
+
+
+/* LAYOUTS */
+
+/* hero section */
+.hero {
+    @apply flex flex-col items-center gap-3
+    bg-cover bg-no-repeat bg-center p-4 md:pl-8 md:pr-10 pb-40
+    pl-3 pr-3;
+    font-size: 18px;
+    /* choose background image */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)),
+        url("../public/assets/seniors-gym-header.webp");
+}
+.true-header {
+    @apply flex flex-row justify-between w-full mb-1;
+}
+.hero h1 {
+    @apply md:text-[52px] md:w-[70%] mb-1 text-shadow-lg
+        text-[32px] w-[96%];
+}
+.hero h2 {
+    @apply md:text-[24px] text-[18px] text-center;
+}
+.hero p {
+    @apply md:w-[50%] w-[92%] text-center mb-2 md:mb-0;
+}
+.heros.cta {
+    @apply md:mb-0 mb-8;
+}
+
+/* sinlge column section */
+.single {
+    @apply flex flex-col items-center gap-6 pt-20 pb-20;
+}
+.single h1 {
+    @apply md:w-[45%] w-[92%];
+}
+.single h2 {
+    @apply md:w-[40%] w-[92%] font-bold text-center mb-2;
+}
+.single p, .single b {
+    @apply md:w-[33%] w-[92%];
+}
+
+/* double column section */
+.double {
+    @apply md:grid md:grid-cols-2 items-center justify-center md:gap-y-14 gap-y-8 gap-x-8 w-[80%]
+        flex flex-col;
+}
+.double-col {
+    @apply flex flex-col items-center md:gap-5 gap-5;
+}
+.double h1 {
+    @apply md:w-[85%] w-[94vw] text-left text-[36px];
+}
+.double p {
+    @apply md:w-[85%] w-[92vw];
+}
+.double.line {
+    @apply md:m-1 md:ml-11 ml-0;
+}
+
+/* background images */
+.background-image {
+    @apply bg-cover bg-center;
+    /* choose background image */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
+        url("../public/assets/seniors-hiking.jpg");
+}
+
+.happy-seniors-background {
+    @apply bg-cover bg-center;
+    /* choose background image */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4)),
+        url("../public/assets/healthy-transformed-seniors-woods.webp");
+}
+
+.running-background {
+    @apply bg-cover bg-center;
+    /* choose background image */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
+        url("../public/assets/senior-running-review.avif");
+}
+
+.final-cta-background {
+    background-image: 
+        linear-gradient(to bottom, white 0%, white 40%, rgb(255, 255, 255, 0.2) 70%),
+        url('../public/assets/seniors-final-hike.jpg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+/* logo section */
+.logo-section {
+    @apply md:flex md:flex-row items-center justify-center bg-gray-200 p-7 md:gap-20
+        flex flex-col gap-10;
+}
+.as-seen {
+    @apply p-3 bg-gray-300 font-bold;
+}
+.logo-container {
+    @apply flex flex-row justify-center flex-wrap md:gap-15 md:max-w-[65vw]
+        max-w-[95vw] gap-8;
+}
+.social-proof-logo {
+    /* adjust grayscale */
+    @apply h-8 filter grayscale opacity-65;
+}
+
+/* faq */
+.faq {
+    @apply max-w-2xl mx-auto mt-12 font-sans gap-2 flex flex-col;
+}
+
+.faq-item {
+    @apply border-b border-black/10;
+}
+
+.faq-question {
+    @apply w-full flex justify-between items-center p-5 text-lg font-bold
+         hover:bg-gray-300 transition cursor-pointer border-none bg-gray-100;
+}
+.faq-question.active {
+    /* choose active question background (brand color usually) */
+    @apply bg-red-100;
+}
+
+.faq-answer {
+    @apply max-h-0 overflow-hidden transition-all duration-300 px-5;
+}
+
+.faq-answer p {
+    @apply py-4 w-fit! text-gray-700;
+}
+
+.icon {
+    @apply text-2xl transition-transform;
+}
+
+
+/* review carousel */
+.review-carousel {
+    @apply bg-cover bg-center;
+    /* choose background image */
+    background-image:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
+        url("../public/assets/trainer.webp");
+}
+
+.carousel {
+    @apply flex flex-row items-center justify-center md:gap-30 md:w-[70%] text-xl
+        w-[98vw] gap-5;
+}
+.carousel span {
+    @apply text-center flex items-center justify-center md:w-[50vw] md:h-[30vh]
+        w-[95vw] h-[48vh];
+}
+
+.review-carousel svg:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.carousel span,
+#review-author {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: inline-flex; /* needed for transform */
+}
+
+.slide-out-left {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.slide-out-right {
+  transform: translateX(50%);
+  opacity: 0;
+}
+.slide-in-left {
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: slideInLeft 0.4s forwards;
+}
+.slide-in-right {
+  transform: translateX(50%);
+  opacity: 0;
+  animation: slideInRight 0.4s forwards;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+/* form */
+.cta-form {
+    @apply flex flex-col items-center gap-3 md:w-[33%] text-lg
+        w-[92%];
+}
+.cta-form input,
+.cta-form textarea {
+    @apply border-2 border-gray-200 p-8 pt-4 pb-4 pl-19 bg-white z-1
+        w-full focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.cta-form span {
+    @apply absolute left-7 top-1/2 -translate-y-1/2 text-black;
+}

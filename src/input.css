@@ -105,7 +105,7 @@ p, b {
     /* choose background image */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)),
-        url("../public/assets/seniors-gym-header.webp");
+        url("assets/seniors-gym-header.webp");
 }
 .true-header {
     @apply flex flex-row justify-between w-full mb-1;
@@ -162,7 +162,7 @@ p, b {
     /* choose background image */
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
-        url("../public/assets/seniors-hiking.jpg");
+        url("assets/seniors-hiking.jpg");
 }
 
 .happy-seniors-background {
@@ -170,7 +170,7 @@ p, b {
     /* choose background image */
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4)),
-        url("../public/assets/healthy-transformed-seniors-woods.webp");
+        url("assets/healthy-transformed-seniors-woods.webp");
 }
 
 .running-background {
@@ -178,13 +178,13 @@ p, b {
     /* choose background image */
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
-        url("../public/assets/senior-running-review.avif");
+        url("assets/senior-running-review.avif");
 }
 
 .final-cta-background {
     background-image: 
         linear-gradient(to bottom, white 0%, white 40%, rgb(255, 255, 255, 0.2) 70%),
-        url('../public/assets/seniors-final-hike.jpg'); 
+        url('assets/seniors-final-hike.jpg'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -244,7 +244,7 @@ p, b {
     /* choose background image */
     background-image:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
-        url("../public/assets/trainer.webp");
+        url("assets/trainer.webp");
 }
 
 .carousel {

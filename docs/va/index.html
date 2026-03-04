@@ -437,16 +437,7 @@
       action="https://gmail.us19.list-manage.com/subscribe/post?u=1bad833910bde8d136bbebc99&id=28ac9e4ff6&f_id=005291e4f0" 
       method="POST"
       novalidate
->
-
-    <!-- redirect to thank you page-->
-    <script>
-      document.querySelector(".cta-form").addEventListener("submit", function() {
-        setTimeout(function() {
-          window.location.href = "/thank-you";
-        }, 700);
-      });
-    </script>
+    >
 
   <!-- Hidden anti-bot field (replace name with Mailchimp’s provided value) -->
   <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -496,7 +487,17 @@
   <button type="submit" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded">Submit</button>
 </form>
 
-    
+    <!-- redirect to thank you page-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector(".cta-form");
+        form.addEventListener("submit", function() {
+          setTimeout(function() {
+            window.location.href = "/thank-you";
+          }, 900); // slightly safer delay
+        });
+      });
+    </script>
     
   </div>
 

@@ -439,15 +439,6 @@
       novalidate
 >
 
-    <!-- redirect to thank you page-->
-    <script>
-      document.querySelector(".cta-form").addEventListener("submit", function() {
-        setTimeout(function() {
-          window.location.href = "/thank-you";
-        }, 700);
-      });
-    </script>
-
   <!-- Hidden anti-bot field (replace name with Mailchimp’s provided value) -->
   <div style="position: absolute; left: -5000px;" aria-hidden="true">
     <input type="text" name="b_1bad833910bde8d136bbebc99_28ac9e4ff6" tabindex="-1" value="">
@@ -495,6 +486,18 @@
 
   <button type="submit" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded">Submit</button>
 </form>
+
+  <!-- redirect to thank you page-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.querySelector(".cta-form");
+      form.addEventListener("submit", function() {
+        setTimeout(function() {
+          window.location.href = "/thank-you";
+        }, 900); // slightly safer delay
+      });
+    });
+  </script>
 
     
     

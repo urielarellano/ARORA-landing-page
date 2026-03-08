@@ -31,12 +31,9 @@
   <script>
     const variant = Math.random() < 0.5 ? 'A' : 'B';
     localStorage.setItem('variant', variant);
-
-    const base = "/ARORA-landing-page/";
-
     setTimeout(() => {
-      window.location.href = base + (variant === 'A' ? 'va/' : 'vb/');
-    }, 50);
+      window.location.href = variant === 'A' ? 'va/' : 'vb/';
+    }, 50); // allow analytics to fire
   </script>
   
 </body>
